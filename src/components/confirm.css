@@ -1,0 +1,14 @@
+.confirm-container {
+    display: flex; /* Use Flexbox for two-column layout */
+    justify-content: space-between; /* Space between form and MiniCart */
+    align-items: flex-start; /* Align form and MiniCart at the top */
+    margin: 20px; /* Add margin for spacing */
+  }
+  
+  .form-container {
+    width: 70%; /* Adjust the width as needed */
+    padding: 10px; /* Add padding for spacing */
+  }
+  
+
+  

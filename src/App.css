@@ -1,0 +1,87 @@
+/* App.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+  }
+  
+  .App {
+    text-align: center;
+  }
+  
+  .Nav {
+    background-color: #232f3e;
+    color: #ffffff;
+  }
+  
+  .NavLinks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .logo {
+    height: 40px;
+    width: auto;
+  }
+  
+  .shop_nav,
+  .login_nav,
+  .cart_nav {
+    margin-right: 20px;
+  }
+  
+  .shop_nav a,
+  .login_nav a,
+  .cart_nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+  }
+  
+  .search_nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  header_searchInput {
+    border: none;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px 0 0 4px;
+    outline-width: 0;
+  }
+  
+  header_searchInput:focus {
+    outline: none;
+  }
+  
+  header_searchInput::placeholder {
+    color: #555555;
+  }
+  
+  header_searchInput:focus + button {
+    background-color: #febd69;
+    color: #111111;
+  }
+  
+  header_searchButton {
+    border: none;
+    background-color: #f0c14b;
+    color: #111111;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 0 4px 4px 0;
+    font-size: 16px;
+  }
+  
+  .header_searchButton:hover {
+    background-color: #ddb347;
+  }
+  
+ 
+  

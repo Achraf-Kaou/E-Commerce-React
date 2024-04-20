@@ -1,0 +1,14 @@
+.grid-services {
+    display: flex;
+    justify-content: space-between; /* To evenly space the items */
+    align-items: center; /* To vertically center the items */
+  }
+  
+  .serv1, .serv2 {
+    display: flex;
+    align-items: center;
+  }
+  
+  .span {
+    margin-left: 10px; /* Adjust the spacing between the icon and text */
+  }

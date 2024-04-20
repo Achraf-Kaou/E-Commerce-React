@@ -1,0 +1,15 @@
+{
+  "hosting": {
+    "site": "mina-store-tn",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "/components/**"  
+    ]
+  },
+  "projects": {
+    "default": "myfirstapp-ffeab"
+  }
+}
