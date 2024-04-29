@@ -25,7 +25,7 @@ export const Addprod = () => {
       setError('Please select a valid image type (jpg or png)');
     }
   };
-  console.log(productImg)
+  
   // add product
   const addProduct = async (e) => {
     e.preventDefault();

@@ -10,11 +10,10 @@ import Addprod from './components/addprod';
 import Cart from './components/navbarCart';
 import Contact from './components/contact';
 import MiniCart from './components/minicart';
-import Login from './components/login';
 import Product from './components/product';
 import Navbar from './components/navbar';
 import Services from "./components/services"
-
+import ProductAdmin from './components/ProductsAdmin';
 function MainApp() {
   return (
     <div className="App">
@@ -36,12 +35,12 @@ function App() {
         <Route path="/addProd" element={<Addprod />} />
         <Route path="/navbarCart" element={<Cart />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<Login />} />
         <Route path='/minicart' element={<MiniCart/>} />
         <Route path='/navbar' element={<Navbar />} />
         <Route path="/product" element={<Product />} />
         <Route path='/services' element={<Services />} />
         <Route path='/cartShop' element={<ShoppingCart/>} />
+        <Route path='/productsadmin' element={<ProductAdmin/>} />
       </Routes>
     </Router>
   );
