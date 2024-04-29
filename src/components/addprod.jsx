@@ -11,7 +11,7 @@ export const Addprod = () => {
   const [productImg, setProductImg] = useState(null);
   const [error, setError] = useState('');
 
-  const types = ['image/png', 'image/jpeg']; // image types
+  const types = ['image/png', 'image/jpeg', 'image/jpg']; // image types
 
   const productImgHandler = (e) => {
     let selectedFile = e.target.files[0];
@@ -23,7 +23,7 @@ export const Addprod = () => {
       setError('Please select a valid image type (jpg or png)');
     }
   };
-
+  console.log(productImg)
   // add product
   const addProduct = async (e) => {
     e.preventDefault();
@@ -39,7 +39,7 @@ export const Addprod = () => {
       await uploadBytes(imageRef, productImg);
 
       // Get the download URL for the uploaded image
-      const url = await getDownloadURL(imageRef);
+      const url = await getDownloadURL(imageRef); 
 
       // Add product to Firestore with the download URL
       const docRef = await addDoc(collection(db, "products"), { prodID:uuidv4(), prodImg: url,prodName: productName,prodPrice: Number(productPrice),});
