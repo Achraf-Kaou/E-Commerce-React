@@ -23,7 +23,7 @@ const Footer = () => {
                     <a href="/" className="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
                         logo
                     </a>
-                    <span className="mb-3 mb-md-0 text-body-secondary">© 2023 - MinaStore</span>
+                    <span className="mb-3 mb-md-0 text-body-secondary">© 2024 - ProjetWeb</span>
                 </div>
                 <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
                     <li class="ms-3"><a className="text-body-secondary" href=""><EnvelopeSimple size={32} /></a></li>

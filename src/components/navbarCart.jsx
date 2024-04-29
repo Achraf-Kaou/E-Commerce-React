@@ -50,9 +50,9 @@ const NavbarCart = () => {
                     <MDBCardImage className="rounded-3" fluid
                     src={c.prod_img}
                     md="5"
-                    alt={c.prod_name} style={{ width: '90px', height: '50px' }} />
-                    <div className='d-flex' md="7">
-                    <p className=""  style={{}}><b>{c.prod_name}</b></p>
+                    alt={c.prod_name} style={{ width: '90px', height: '70px' }} />
+                    <div className='d-flex row' md="7">
+                    <MDBTypography className=""><b>{c.prod_name}</b></MDBTypography>
                     <MDBRow className="justify-content-between align-items-center">
                         <div className='d-flex'>
                             <MDBCol className="d-flex align-items-center">

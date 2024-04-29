@@ -61,7 +61,7 @@ function Navigation() {
         <Navbar expand="lg" className="bg-body-tertiary px-5 py-2" fixed="top">
             <Container>
                 <Navbar.Brand>
-                    <img className='d-inline-block align-top logo' src='./logo.png' alt="Logo" />
+                    <img className='d-inline-block align-top logo ' src='./logo.png' alt="Logo" />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
