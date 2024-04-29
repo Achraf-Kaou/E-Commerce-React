@@ -55,18 +55,8 @@ function Confirm() {
             totale: total,
             ville: values.ville
         };
-        
-        
-            const docRef = await addDoc(collection(db, "commande"), commandeData);
-            
-    
-            
-            
-    
-            emailjs.sendForm('service_z0hu0oh', 'template_0qh3fjk', Form.current,'m_S1m3rvWbBA1-UfL')
-
-            
-        
+        const docRef = await addDoc(collection(db, "commande"), commandeData);
+        emailjs.sendForm('service_z0hu0oh', 'template_0qh3fjk', Form.current,'m_S1m3rvWbBA1-UfL')
         emailjs.sendForm('service_z0hu0oh', 'template_41918yr', Form.current,'m_S1m3rvWbBA1-UfL');
         dispatch({
             type: 'emptyCart',

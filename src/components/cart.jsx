@@ -111,7 +111,7 @@ function Cart({ isInMiniCart}) {
             {isInMiniCart && ( // Conditionally render the button
                 <button className='confirmer_butt' style={{width:'91px'}} 
                 >
-                    <Link to='/confirm'>confirmer</Link>
+                    <Link to='/CartShop'>confirmer</Link>
                 </button>
                 
             )}
