@@ -1,12 +1,14 @@
 import React, { useState,dangerouslySetInnerHTML } from 'react';
 import Addprod from './addprod';
 import styles from './Admin.module.css';
+import { useNavigate } from 'react-router-dom';
 
 const Admin = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
+  const navigate = useNavigate();
   const submit = (e) => {
     e.preventDefault();
     if (username === 'mina store admin' && password === 'l8S#d2K@X9:9!') {
@@ -18,14 +20,14 @@ const Admin = () => {
   };
 
   return (
-    <div >
+    <div>
       <div class={styles.background}>
         <div class={styles.shape}></div>
         <div class={styles.shape}></div>
       </div>
 
       {formSubmitted ? (
-        <Addprod />
+        navigate('/addProd')
       ) : (
         <div>
         <form className={styles.admin} onSubmit={submit}>

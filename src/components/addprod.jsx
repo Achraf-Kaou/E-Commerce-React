@@ -3,6 +3,8 @@ import { db, storage } from '../config/config';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import {collection, addDoc} from 'firebase/firestore';
 import { v4 as uuidv4 } from 'uuid';
+import styles from './add.module.css';
+
 
 
 export const Addprod = () => {
@@ -61,8 +63,8 @@ export const Addprod = () => {
       <br />
       <h2>ADD PRODUCTS</h2>
       <hr />
-      <form autoComplete="off" className="form-group" onSubmit={addProduct}>
-        <label htmlFor="product-name">Product Name</label>
+      <form autoComplete="off" className={styles.form} onSubmit={addProduct}>
+        <label htmlFor="product-name" >Product Name</label>
         <input
           type="text"
           className="form-control"

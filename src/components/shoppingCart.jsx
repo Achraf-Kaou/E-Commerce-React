@@ -71,8 +71,8 @@ export default function CartCheckout() {
     });
     }
 return (
-<section className="h-100 h-custom" style={{ backgroundColor: "#eee" }}>
-    <MDBContainer className="h-100 py-5">
+<section className="h-auto h-auto" style={{ backgroundColor: "#eee" }}>
+    <MDBContainer className="h-auto py-3">
         <MDBRow className="justify-content-center align-items-center h-100">
             <MDBCol>
                 <MDBCard className="shopping-cart" style={{ borderRadius: "15px" }}>

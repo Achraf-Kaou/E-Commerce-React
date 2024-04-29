@@ -30,7 +30,6 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<MainApp />} />
-
         <Route path="/shop" element={<Shop />} />
         <Route path="/footer" element={<Footer />} />
         <Route path="/admin" element={<Admin />}  />

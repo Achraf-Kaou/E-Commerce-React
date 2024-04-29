@@ -8,13 +8,13 @@ import {Truck,Wallet,PhoneCall,InstagramLogo,FacebookLogo,EnvelopeSimple} from '
 const Footer = () => {
     return (
         <Container id="footer">
-            <div className='row justify-content-center align-items-center g-2'>
-                <div className='features-box col-lg-6'>
-                    <Truck size={32}/>
+            <div className=' row justify-content-center align-items-center g-2'>
+                <div className='d-flex features-box col-lg-6'>
+                    <Truck size={32} style={{position:'relative',bottom:'10px'}}/>
                     <span className='spam'><h4> Livraison rapide en 24h-48h</h4> </span>
                 </div>
-                <div className='features-box col-lg-6'>
-                    <Wallet size={32}/>
+                <div className='d-flex features-box col-lg-6'>
+                    <Wallet size={32} style={{position:'relative',bottom:'10px'}}/>
                     <span className='spam'><h4>Guarantie</h4></span>
                 </div>
             </div>
