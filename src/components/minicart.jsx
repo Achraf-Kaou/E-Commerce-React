@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './minicart.css';
 import { X } from 'phosphor-react';
 import { useStateValue } from '../StateProvider';
-import Cart from './cart';
+import Cart from './navbarCart';
 
 function MiniCart({ toggleMiniCart }) {
     const [{ cart }, dispatch] = useStateValue();

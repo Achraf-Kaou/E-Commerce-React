@@ -8,7 +8,7 @@ import ShoppingCart from './components/shoppingCart';
 import Confirm from './components/confirm';
 import Admin from './components/admin';
 import Addprod from './components/addprod';
-import Cart from './components/cart';
+import Cart from './components/navbarCart';
 import Contact from './components/contact';
 import MiniCart from './components/minicart';
 import Login from './components/login';
@@ -36,12 +36,12 @@ function App() {
         <Route path="/footer" element={<Footer />} />
         <Route path="/admin" element={<Admin />}  />
         <Route path="/addProd" element={<Addprod />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/navbarCart" element={<Cart />} />
         <Route path="/confirm" element={<Confirm />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
-        <Route path='minicart' element={<MiniCart/>} />
-        <Route path='navbar' element={<Navbar />} />
+        <Route path='/minicart' element={<MiniCart/>} />
+        <Route path='/navbar' element={<Navbar />} />
         <Route path="/product" element={<Product />} />
         <Route path='/services' element={<Services />} />
         <Route path='/cartShop' element={<ShoppingCart/>} />
