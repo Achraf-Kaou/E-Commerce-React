@@ -6,6 +6,7 @@ import { ShoppingCart, Storefront, House, AddressBook } from 'phosphor-react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './navbar.css';
 import MiniCart from './minicart';
+import { Link } from 'react-router-dom';
 
 function Navigation() {
     // click on the Home button => scroll to the top
@@ -73,9 +74,9 @@ function Navigation() {
                         <Nav.Link className="mybtn" to="/shop" onClick={scrollToShop}>
                             <Storefront size={30} style={{position:'relative',bottom:'10px'}}/><span className="spam">Shop</span>
                         </Nav.Link>
-                        <Nav.Link className="mybtn" to="/footer" onClick={scrollTofooter}>
-                            <AddressBook size={30} style={{position:'relative',bottom:'10px'}}/><span className="spam">Contact us</span>
-                        </Nav.Link>
+                        <Link className="mybtn" to="/contact" >
+                            <AddressBook size={30} style={{position:'relative',bottom:'10px',marginTop:'8px'}}/><span className="spam1">Contact us</span>
+                        </Link>
                         <Nav.Link className="mybtn" onClick={toggleMiniCart}>
                             <ShoppingCart size={30} style={{position:'relative',bottom:'10px'}}/>
                         </Nav.Link>

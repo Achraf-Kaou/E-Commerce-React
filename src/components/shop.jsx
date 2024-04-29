@@ -42,11 +42,17 @@ function Shop(props) {
                     ))}
                 </div>
                 <div className="pagination d-flex justify-content-center m-3">
-                    <Pagination.Prev onClick={() => {if (currentPage > 1) { setCurrentPage((prevPage) => prevPage - 1);
-                            }}}disabled={currentPage <= 1} />
-                    <Pagination>{items}</Pagination> {/* Render the Pagination component with items */}
-                    <Pagination.Next onClick={() => {setCurrentPage((prevPage) => prevPage + 1); window.scrollTo(0, 0)}}
-                        disabled={endIndex >= productData.length} />
+                    <Pagination.Prev onClick={() => {
+                        if (currentPage > 1) {
+                            setCurrentPage((prevPage) => prevPage - 1);
+                            window.scrollTo(0, 0);
+                        }
+                    }} disabled={currentPage <= 1} />
+                    <Pagination>{items}</Pagination>
+                    <Pagination.Next onClick={() => {
+                        setCurrentPage((prevPage) => prevPage + 1);
+                        window.scrollTo(0, 0);
+                    }} disabled={endIndex >= productData.length} />
                 </div>
             </div>
         </Container>

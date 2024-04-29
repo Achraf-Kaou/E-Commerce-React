@@ -9,5 +9,15 @@
     width: auto;
     height: 4rem;
 }
+.mybtn{
+    text-decoration: none;
+    color: #000;
+    align-items: center;
+    justify-content: center;
+}
+
+.spam1{
+    margin-top: 8px;
+}
 
 
