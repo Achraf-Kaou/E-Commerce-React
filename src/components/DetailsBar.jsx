@@ -69,7 +69,6 @@ const ContactsWrapper = styled.a`
 
 const ContactText = styled.div`
   color: #fff;
-
   font-size: 15px;
   margin-left: 10px;
 `;
@@ -122,13 +121,13 @@ const DetailsBar = () => {
       </div>
 
       <SocialsWrapper>
-        <SocialIconWrapper href="https://www.facebook.com/profile.php?id=100021937291259">
+        <SocialIconWrapper href="/">
           <Icon.Facebook color="#fff" size={20} />
         </SocialIconWrapper>
-        <SocialIconWrapper href="https://www.instagram.com/_allenjones/">
+        <SocialIconWrapper href="/">
           <Icon.Instagram color="#fff" size={20} />
         </SocialIconWrapper>
-        <SocialIconWrapper href="https://www.linkedin.com/in/allen-jones-b799b7171/">
+        <SocialIconWrapper href="/">
           <Icon.Linkedin color="#fff" size={20} />
         </SocialIconWrapper>
       </SocialsWrapper>
