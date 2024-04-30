@@ -7,8 +7,16 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './navbar.css';
 import MiniCart from './minicart';
 import { Link } from 'react-router-dom';
-
+import logo from '../whitelogo.png'
+import { useNavigate, useLocation } from 'react-router-dom';
 function Navigation() {
+    const Navigate = useNavigate();
+    const path = useLocation()
+    const handleNavigation = (destination) => {
+        if (path.pathname !== '/') {
+            Navigate(destination)
+        }
+    }
     // click on the Home button => scroll to the top
     const scrollToTop = () => {
         window.scrollTo({
@@ -59,26 +67,28 @@ function Navigation() {
     
 
     return (
-        <Navbar expand="lg" className="bg-body-tertiary px-5 py-2" fixed="top">
+        <Navbar expand="lg" className="px-5 py-2 bg-dark text-white" fixed="top">
             <Container>
                 <Navbar.Brand>
-                    <img className='d-inline-block align-top logo ' src='./logo.png' alt="Logo" />
+                    <a href="#" style={{textDecoration : 'none', color : 'black'}}>
+                        <img className='d-inline-block align-top logo ' src={logo} alt="Logo" /><h2 style={{position:'relative',top:'5px'}} className='text-white'>   Le Sportif</h2>
+                    </a>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
                 <Navbar.Collapse id="basic-navbar-nav " >
-                    <Nav className="me-auto" style={{ position: 'absolute', right: '7%', bottom :'2%' }}>
-                        <Nav.Link className="mybtn" to="/" onClick={scrollToTop}>
-                            <House size={30} style={{position:'relative',bottom:'10px'}}/><span className="spam">Home</span>
+                    <Nav className="me-auto" style={{ position: 'absolute', right: '7%' }}>
+                        <Nav.Link className="mybtn" to="/" onClick={() => {scrollToTop();handleNavigation('/');}}>
+                            <House size={30} style={{position:'relative',bottom:'5px', color : 'white'}}/><span className='text-white'>Home</span>
                         </Nav.Link>
-                        <Nav.Link className="mybtn" to="/shop" onClick={scrollToShop}>
-                            <Storefront size={30} style={{position:'relative',bottom:'10px'}}/><span className="spam">Shop</span>
+                        <Nav.Link className="mybtn" to="/shop" onClick={()=>{scrollToShop();handleNavigation('/')}}>
+                            <Storefront size={30} style={{position:'relative',bottom:'5px', color : 'white'}}/><span className='text-white'>Shop</span>
                         </Nav.Link>
                         <Link className="mybtn" to="/contact" >
-                            <AddressBook size={30} style={{position:'relative',bottom:'10px',marginTop:'8px'}}/><span className="spam1">Contact us</span>
+                            <AddressBook size={30} style={{position:'relative',bottom:'5px',marginTop:'8px', color : 'white'}}/><span className='text-white'>Contact us</span>
                         </Link>
                         <Nav.Link className="mybtn" onClick={toggleMiniCart}>
-                            <ShoppingCart size={30} style={{position:'relative',bottom:'10px'}}/>
+                            <ShoppingCart size={30} style={{position:'relative',bottom:'5px', color : 'white'}}/>
                         </Nav.Link>
                     </Nav>
                     {isMiniCartOpen && <MiniCart toggleMiniCart={toggleMiniCart}  /> && (

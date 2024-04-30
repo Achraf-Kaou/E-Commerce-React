@@ -1,4 +1,4 @@
-import React, { useState,dangerouslySetInnerHTML } from 'react';
+import React, { useState } from 'react';
 import Addprod from './addprod';
 import styles from './Admin.module.css';
 import { useNavigate } from 'react-router-dom';
@@ -11,7 +11,7 @@ const Admin = () => {
   const navigate = useNavigate();
   const submit = (e) => {
     e.preventDefault();
-    if (username === 'mina store admin' && password === 'l8S#d2K@X9:9!') {
+    if (username === 'admin' && password === 'admin') {
       setFormSubmitted(true);
     } else {
       setErrorMessage('Invalid username or wrong password. Please try again.');
