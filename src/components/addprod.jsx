@@ -3,7 +3,7 @@ import { db, storage } from '../config/config';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import {collection, addDoc} from 'firebase/firestore';
 import { v4 as uuidv4 } from 'uuid';
-import styles from './add.module.css';
+
 
 
 
@@ -45,7 +45,7 @@ export const Addprod = () => {
 
       // Add product to Firestore with the download URL
       const docRef = await addDoc(collection(db, "products"), { prodID:uuidv4(), prodImg: url,prodName: productName,prodPrice: Number(productPrice),});
-    
+      alert("produit ajoutee avec succees")
 
       // Reset form fields and error state
       setProductName('');
@@ -63,7 +63,7 @@ export const Addprod = () => {
       <br />
       <h2>ADD PRODUCTS</h2>
       <hr />
-      <form autoComplete="off" className={styles.form} onSubmit={addProduct}>
+      <form autoComplete="off" className="form" onSubmit={addProduct}>
         <label htmlFor="product-name" >Product Name</label>
         <input
           type="text"

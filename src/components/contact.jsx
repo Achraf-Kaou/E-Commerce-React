@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import DetailsBar from '../components/DetailsBar';
 import InputSide from '../components/InputSide';
-
+import Navigation from './navbar';
 const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -46,6 +46,7 @@ const TextTwo = styled.p`
 const FormPage = () => {
   return (
     <PageWrapper>
+      <Navigation/>
       <PageHeadingWrapper>
         <TextOne>Contact US</TextOne>
         <TextTwo>Any Question or remarks? Just write us a message</TextTwo>
