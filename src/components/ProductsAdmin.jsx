@@ -54,9 +54,9 @@ export default function App() {
                       <td>{product.prodName}</td>
                       <td>{product.prodPrice} DT</td>
                       <td>
-                        <Button type="button" color="danger" onClick={() => handleSupprim(product.prodID)}>
+                        <button type="button" color="danger" className="btn btn-danger" onClick={() => handleSupprim(product.prodID)}>
                           Delete
-                        </Button>
+                        </button>
                       </td>
                     </tr>))}
                   </MDBTableBody>

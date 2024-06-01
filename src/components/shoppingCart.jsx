@@ -92,7 +92,7 @@ export default function CartCheckout() {
                 ville: values.ville
             };
             const docRef = await addDoc(collection(db, "commande"), commandeData);
-            emailjs.sendForm("service_iopxslh","template_1kuai9w", e.target,"p_0L7aVOJI6ZzW9si")
+            emailjs.sendForm("service_iopxslh","template_1kuai9w", e.target ,"p_0L7aVOJI6ZzW9si")
             dispatch({
                 type: 'emptyCart',
             });
@@ -143,9 +143,9 @@ export default function CartCheckout() {
     }
 
     return (
-        <section className="h-auto h-auto" style={{ backgroundColor: "#eee" }}>
-            <MDBContainer className="h-auto py-3">
-                <MDBRow className="justify-content-center align-items-center h-100">
+        <section className="" style={{ backgroundColor: "#eee" }}>
+            <MDBContainer className=" py-3">
+                <MDBRow className="justify-content-center align-items-center ">
                     <MDBCol>
                         <MDBCard className="shopping-cart" style={{ borderRadius: "15px" }}>
                             <MDBCardBody className="text-black">
@@ -282,7 +282,7 @@ export default function CartCheckout() {
                                                 </Form.Group>
                                             </Row>
                                             <Row>
-                                                <button block size="lg" type="submit" className="btn btn-primary">
+                                                <button block size="lg" type="submit" className="btn btn-dark">
                                                     Buy now
                                                 </button>
                                             </Row>

@@ -32,13 +32,13 @@ function Product(props) {
             <Card.Img variant="top" src={prod_img} alt={prod_name} className='product-image' style={{height : '250px', width : '250px'}} />
             <Card.Body className='product-details'>
                 <Card.Title className='product-name'>{prod_name}</Card.Title>
-                <Card.Text className='product-price'>
+                <Card.Text className='product-price text-dark'>
                     {prod_price} DT
                 </Card.Text>
-                <Button variant="primary" className='add-to-cart' onClick={addToCart}>
+                <button className='btn btn-dark' onClick={addToCart}>
                     <ShoppingCart size={22} />
                     Ajouter au panier
-                </Button>
+                </button>
             </Card.Body>
         </Card>
     );

@@ -3,6 +3,7 @@ import { db, storage } from '../config/config';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import {collection, addDoc} from 'firebase/firestore';
 import { v4 as uuidv4 } from 'uuid';
+import {useNavigate} from "react-router-dom";
 
 
 
@@ -12,7 +13,7 @@ export const Addprod = () => {
   const [productPrice, setProductPrice] = useState(0);
   const [productImg, setProductImg] = useState(null);
   const [error, setError] = useState('');
-
+  const Navigate = useNavigate();
   const types = ['image/png', 'image/jpeg', 'image/jpg']; // image types
 
   const productImgHandler = (e) => {
@@ -61,7 +62,7 @@ export const Addprod = () => {
   return (
     <div className="container">
       <br />
-      <h2>ADD PRODUCTS</h2>
+      <h2>ADD PRODUCTS or <a href='/productsadmin'>CONSULTER PRODUCTS</a></h2>
       <hr />
       <form autoComplete="off" className="form" onSubmit={addProduct}>
         <label htmlFor="product-name" >Product Name</label>
@@ -85,7 +86,7 @@ export const Addprod = () => {
         <label htmlFor="product-img">Product Image</label>
         <input type="file" className="form-control" id="file" required onChange={productImgHandler} />
         <br />
-        <button type="submit" className="btn btn-success btn-md mybtn">
+        <button type="submit" className="btn btn-dark btn-md mybtn">
           ADD
         </button>
       </form>
