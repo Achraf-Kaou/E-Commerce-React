@@ -1,35 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
-  MDBBtn,
   MDBCard,
   MDBCardBody,
   MDBCol,
   MDBContainer,
-  MDBInput,
   MDBRow,
   MDBTable,
   MDBTableBody,
   MDBTableHead,
 } from "mdb-react-ui-kit";
-import {productData} from '../products';
-import { Button } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { fetchProducts } from '../products';
 import { doc, deleteDoc } from 'firebase/firestore';
 import { db } from "../config/config";
 
 
 export default function App() {
-    const handleSupprim = async(productId)=> {
-        await deleteDoc(doc(db, 'products', productId))
-          .then(() => {
-            console.log('Product deleted successfully');
-            // Handle success, if needed (e.g., update product list)
-          })
-          .catch((error) => {
-            console.error('Error deleting product:', error);
-            // Handle error, if needed
-          });
-      }
+  const [products, setProducts] = useState([]);
+
+  const loadProducts = async () => {
+    const data = await fetchProducts();
+    setProducts(data);
+  };
+
+  useEffect(() => {
+    loadProducts();
+  }, []);
+
+  const handleSupprim = async (productId) => {
+    try {
+      await deleteDoc(doc(db, 'products', productId));
+      await loadProducts();
+    } catch (error) {
+      console.error('Error deleting product:', error);
+    }
+  };
+
   return (
     <section className="" style={{ backgroundColor: "#eee" }}>
       <MDBContainer className="py-5">
@@ -48,13 +53,13 @@ export default function App() {
                     </tr>
                   </MDBTableHead>
                   <MDBTableBody>
-                    {productData.map((product)=> (
-                    <tr key={product.prodID}>
-                      <th scope="row"><img src={product.prodImg} style={{width : "90px" , height : "90px"}}/></th>
+                    {products.map((product)=> (
+                    <tr key={product.docId || product.prodID}>
+                      <th scope="row"><img src={product.prodImg} style={{width : "90px" , height : "90px"}} alt={product.prodName} /></th>
                       <td>{product.prodName}</td>
                       <td>{product.prodPrice} DT</td>
                       <td>
-                        <button type="button" color="danger" className="btn btn-danger" onClick={() => handleSupprim(product.prodID)}>
+                        <button type="button" color="danger" className="btn btn-danger" onClick={() => handleSupprim(product.docId)}>
                           Delete
                         </button>
                       </td>
